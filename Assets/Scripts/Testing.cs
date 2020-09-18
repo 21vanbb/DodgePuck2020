@@ -7,8 +7,9 @@ public class Testing : MonoBehaviour
     public int score = 7;
     public int highscore = 10;
     private int temp = 70;
-    public float location = 0.0f;
-    public float loc2 = 1.5f; 
+    public float location = 0.0f;  
+    public float loc2 = 1.5f;
+    public int speed = 10;
 
     // Start is called before the first frame update
     void Start()
@@ -21,13 +22,18 @@ public class Testing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.D))
-        {
-            Debug.Log("D was pressed"); 
-        }
-        if (Input.GetKeyDown(KeyCode.L))
-        {
-            Debug.Log("location: " + 0.5f);
-        }
+        float moveHorizontal = Input.GetAxis("Horizontal");
+        Debug.log(moveHorizontal);
+        float moveVertical = Input.GetAxis("Vertical");
+        Vector2 movement = new Vector2(moveHorizontal, moveVertical);
+        //if (Input.GetKeyDown(KeyCode.D))
+        //{
+            //Debug.Log(Input.GetAxis("Horizontal"));
+            //transform.Translate(Vector2.right * speed * Time.deltaTime);
+        //}
+        //if (Input.GetKeyDown(KeyCode.L))
+        //{
+            //Debug.Log("location: " + 0.5f);
+        //}
     }
 }
