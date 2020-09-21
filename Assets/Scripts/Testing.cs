@@ -10,6 +10,8 @@ public class Testing : MonoBehaviour
     public float location = 0.0f;  
     public float loc2 = 1.5f;
     public int speed = 10;
+    public float xRange = 9.0f;
+    public float yRange = 6.0f; 
 
     // Start is called before the first frame update
     void Start()
@@ -36,5 +38,14 @@ public class Testing : MonoBehaviour
         //{
             //Debug.Log("location: " + 0.5f);
         //}
+    }
+
+    private void LateUpdate()
+    {
+        //Keep player in bouds of xRange and yRange
+        if (transform.positon.x > xRange)
+        {
+            transform.postion.x = new Vector2(xRange, transform.position.y); 
+        }
     }
 }
