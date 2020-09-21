@@ -23,13 +23,14 @@ public class Testing : MonoBehaviour
     void Update()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
-        Debug.log(moveHorizontal);
+        Debug.Log(moveHorizontal); 
         float moveVertical = Input.GetAxis("Vertical");
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
+        transform.Translate(movement * speed * Time.deltaTime);
         //if (Input.GetKeyDown(KeyCode.D))
         //{
-            //Debug.Log(Input.GetAxis("Horizontal"));
-            //transform.Translate(Vector2.right * speed * Time.deltaTime);
+        //    Debug.Log(Input.GetAxis("Horizontal"));
+        //    transform.Translate(Vector2.right * speed * Time.deltaTime);
         //}
         //if (Input.GetKeyDown(KeyCode.L))
         //{
