@@ -42,10 +42,22 @@ public class Testing : MonoBehaviour
 
     private void LateUpdate()
     {
-        //Keep player in bouds of xRange and yRange
-        if (transform.positon.x > xRange)
+        //Keep player in bounds of xRange and yRange
+        if (transform.position.x > xRange)
         {
-            transform.postion.x = new Vector2(xRange, transform.position.y); 
+            transform.position = new Vector2(xRange, transform.position.y); 
+        }
+        if (transform.position.x < -xRange)
+        {
+            transform.position = new Vector2(-xRange, transform.position.y); 
+        }
+        if (transform.position.y > yRange)
+        {
+            transform.position = new Vector2(yRange, transform.position.x);
+        }
+        if (transform.position.y < -yRange)
+        {
+            transform.position = new Vector2(-yRange, transform.position.x);
         }
     }
 }
