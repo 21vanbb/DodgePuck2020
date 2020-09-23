@@ -11,7 +11,9 @@ public class Testing : MonoBehaviour
     public float loc2 = 1.5f;
     public int speed = 10;
     public float xRange = 9.0f;
-    public float yRange = 6.0f; 
+    public float yRange = 6.0f;
+    public GameObject Puck; 
+    public GameObject Blocky; 
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +21,14 @@ public class Testing : MonoBehaviour
         //Debug.Log("Hello, World!");
         score += 2; 
         Debug.Log(score + highscore);
+        //function: named set of instructions i.e. a recipe
+        BrennaFunction();
+    }
+
+    void BrennaFunction()
+    {
+        Debug.Log("BrennaFunction has run");
+        Instantiate(Puck,new Vector2(0,0), Quaternion.identity); 
     }
 
     // Update is called once per frame
