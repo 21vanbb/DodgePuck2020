@@ -22,13 +22,20 @@ public class Testing : MonoBehaviour
         score += 2; 
         Debug.Log(score + highscore);
         //function: named set of instructions i.e. a recipe
-        BrennaFunction();
+        SpawnPuck();
+        SpawnBlocky(); 
     }
 
-    void BrennaFunction()
+    void SpawnPuck()
     {
-        Debug.Log("BrennaFunction has run");
-        Instantiate(Puck,new Vector2(0,0), Quaternion.identity); 
+        Debug.Log(Random.Range(1.0f,10.0f)); 
+        Instantiate(Puck,new Vector2(Random.Range(-9.0f,9.0f),Random.Range(-6.0f,6.0f)), Quaternion.identity); 
+    }
+
+    void SpawnBlocky()
+    {
+        Debug.Log(Random.Range(1.0f, 10.0f));
+        Instantiate(Blocky, new Vector2(Random.Range(-9.0f, 9.0f), Random.Range(-6.0f, 6.0f)), Quaternion.identity);
     }
 
     // Update is called once per frame

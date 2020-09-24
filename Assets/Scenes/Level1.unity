@@ -556,7 +556,7 @@ MonoBehaviour:
   highscore: 10
   location: 0
   loc2: 1.5
-  speed: 1
+  speed: 10
   xRange: 9
   yRange: 6
   Puck: {fileID: 6692887806622542341, guid: 5e4d377ee0c96634c869282daef1343a, type: 3}
