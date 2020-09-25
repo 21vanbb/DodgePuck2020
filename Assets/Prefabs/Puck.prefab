@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 6692887806622542339}
   - component: {fileID: 6692887806622542338}
   - component: {fileID: 5202381864779628182}
+  - component: {fileID: 1598133586230950882}
   m_Layer: 0
   m_Name: Puck
   m_TagString: Untagged
@@ -94,3 +95,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7deb3f5801103e541bb5b00badbd3484, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  direction: 00000000010000000200000003000000
+  moveDirection: 0
+  puckSpeed: 5
+--- !u!58 &1598133586230950882
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6692887806622542341}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5

@@ -39,4 +39,6 @@ public class PuckController : MonoBehaviour
             transform.Translate(transform.right * -puckSpeed * Time.deltaTime);
         }
     }
+
+
 }
