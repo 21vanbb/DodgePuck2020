@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Testing : MonoBehaviour
+public class TestingPlayerController : MonoBehaviour
 {
     public int score = 7;
     public int highscore = 10;
@@ -57,6 +57,17 @@ public class Testing : MonoBehaviour
         //}
     }
 
+    void OnCollisionEnter(Collision collision)
+    {
+        //if it's tagged as "blocky":
+        if (collision.gameObject.tag == "Blocky")
+        {
+            //add 5 to score
+            Debug.Log("Hit Blocky");
+        }
+        //if it's tagged as "puck":
+    }
+
     private void LateUpdate()
     {
         //Keep player in bounds of xRange and yRange
@@ -77,4 +88,5 @@ public class Testing : MonoBehaviour
             transform.position = new Vector2(-yRange, transform.position.x);
         }
     }
+
 }
