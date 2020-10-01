@@ -89,4 +89,9 @@ public class TestingPlayerController : MonoBehaviour
         }
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        Debug.Log("You hit a trigger!"); 
+    }
+
 }
