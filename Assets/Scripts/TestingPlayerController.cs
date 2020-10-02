@@ -57,7 +57,7 @@ public class TestingPlayerController : MonoBehaviour
         //}
     }
 
-    void OnCollisionEnter(Collision collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         //if it's tagged as "blocky":
         if (collision.gameObject.tag == "Blocky")
@@ -88,10 +88,4 @@ public class TestingPlayerController : MonoBehaviour
             transform.position = new Vector2(-yRange, transform.position.x);
         }
     }
-
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        Debug.Log("You hit a trigger!"); 
-    }
-
 }
