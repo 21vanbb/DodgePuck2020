@@ -4,23 +4,24 @@ using UnityEngine;
 
 public class TestingPlayerController : MonoBehaviour
 {
-    public int score = 7;
-    public int highscore = 10;
-    private int temp = 70;
+    //public int score = 7;
+    //public int highscore = 10;
+    //private int temp = 70;
     public float location = 0.0f;  
     public float loc2 = 1.5f;
     public int speed = 10;
     public float xRange = 9.0f;
     public float yRange = 6.0f;
     public GameObject Puck; 
-    public GameObject Blocky; 
+    public GameObject Blocky;
+    public int Score = 0; 
 
     // Start is called before the first frame update
     void Start()
     {
         //Debug.Log("Hello, World!");
-        score += 2; 
-        Debug.Log(score + highscore);
+        //score += 2; 
+        //Debug.Log(score + highscore);
         //function: named set of instructions i.e. a recipe
         SpawnPuck();
         SpawnBlocky(); 
@@ -63,7 +64,8 @@ public class TestingPlayerController : MonoBehaviour
         if (collision.gameObject.tag == "Blocky")
         {
             //add 5 to score
-            Debug.Log("Hit Blocky");
+            Score += 5;
+            Debug.Log(Score);
         }
         //if it's tagged as "puck":
     }
