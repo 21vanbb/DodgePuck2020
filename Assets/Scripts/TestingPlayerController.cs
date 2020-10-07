@@ -30,13 +30,13 @@ public class TestingPlayerController : MonoBehaviour
     void SpawnPuck()
     {
         Debug.Log(Random.Range(1.0f,10.0f)); 
-        Instantiate(Puck,new Vector2(Random.Range(-9.0f,9.0f),Random.Range(-6.0f,6.0f)), Quaternion.identity); 
+        Instantiate(Puck,new Vector2(Random.Range(-9.0f,9.0f),Random.Range(-4.0f,6.0f)), Quaternion.identity); 
     }
 
     void SpawnBlocky()
     {
         Debug.Log(Random.Range(1.0f, 10.0f));
-        Instantiate(Blocky, new Vector2(Random.Range(-9.0f, 9.0f), Random.Range(-6.0f, 6.0f)), Quaternion.identity);
+        Instantiate(Blocky, new Vector2(Random.Range(-9.0f, 9.0f), Random.Range(-4.0f, 6.0f)), Quaternion.identity);
     }
 
     // Update is called once per frame
@@ -66,6 +66,9 @@ public class TestingPlayerController : MonoBehaviour
             //add 5 to score
             Score += 5;
             Debug.Log(Score);
+            Destroy(collision.gameObject);
+            SpawnBlocky();
+            SpawnPuck();
         }
         //if it's tagged as "puck":
     }
