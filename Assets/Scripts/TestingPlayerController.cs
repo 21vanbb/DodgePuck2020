@@ -14,7 +14,9 @@ public class TestingPlayerController : MonoBehaviour
     public float yRange = 6.0f;
     public GameObject Puck; 
     public GameObject Blocky;
-    public int Score = 0; 
+    public int Score = 0;
+    public GameObject scoreText;
+    public GameObject gameOverText; 
 
     // Start is called before the first frame update
     void Start()

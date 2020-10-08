@@ -40,5 +40,8 @@ public class PuckController : MonoBehaviour
         }
     }
 
-
+    void OnTriggerEnter2D (Collider2D collision)
+    {
+        puckSpeed = -puckSpeed;
+    }
 }
