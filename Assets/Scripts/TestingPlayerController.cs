@@ -69,6 +69,7 @@ public class TestingPlayerController : MonoBehaviour
             Score += 5;
             Debug.Log(Score);
             Destroy(collision.gameObject);
+            scoreText.GetCompnent<ScoreKeeper>(); 
             SpawnBlocky();
             SpawnPuck();
         }
