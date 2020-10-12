@@ -45,7 +45,7 @@ public class TestingPlayerController : MonoBehaviour
     void Update()
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
-        Debug.Log(moveHorizontal); 
+        //Debug.Log(moveHorizontal); 
         float moveVertical = Input.GetAxis("Vertical");
         Vector2 movement = new Vector2(moveHorizontal, moveVertical);
         transform.Translate(movement * speed * Time.deltaTime);
@@ -69,11 +69,15 @@ public class TestingPlayerController : MonoBehaviour
             Score += 5;
             Debug.Log(Score);
             Destroy(collision.gameObject);
-            scoreText.GetCompnent<ScoreKeeper>(); 
+            scoreText.GetComponent<ScoreKeeper>(); 
             SpawnBlocky();
             SpawnPuck();
         }
         //if it's tagged as "puck":
+        if (collision.gameObject.tag == "Puck")
+        {
+            gameOverText.SetActive(true);
+        }
     }
 
     private void LateUpdate()
