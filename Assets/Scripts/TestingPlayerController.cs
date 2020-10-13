@@ -1,12 +1,10 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TestingPlayerController : MonoBehaviour
 {
-    //public int score = 7;
-    //public int highscore = 10;
-    //private int temp = 70;
     public float location = 0.0f;  
     public float loc2 = 1.5f;
     public int speed = 10;
@@ -31,14 +29,14 @@ public class TestingPlayerController : MonoBehaviour
 
     void SpawnPuck()
     {
-        Debug.Log(Random.Range(1.0f,10.0f)); 
-        Instantiate(Puck,new Vector2(Random.Range(-9.0f,9.0f),Random.Range(-4.0f,6.0f)), Quaternion.identity); 
+        //Debug.Log(Random.Range(1.0f,10.0f)); 
+        Instantiate(Puck,new Vector2(Random.Range(-7.18f, 7.0f),Random.Range(-3.0f, 6.0f)), Quaternion.identity); 
     }
 
     void SpawnBlocky()
     {
-        Debug.Log(Random.Range(1.0f, 10.0f));
-        Instantiate(Blocky, new Vector2(Random.Range(-9.0f, 9.0f), Random.Range(-4.0f, 6.0f)), Quaternion.identity);
+        //Debug.Log(Random.Range(1.0f, 10.0f));
+        Instantiate(Blocky, new Vector2(Random.Range(-7.18f, 7.0f), Random.Range(-3.0f, 6.0f)), Quaternion.identity);
     }
 
     // Update is called once per frame
@@ -72,12 +70,18 @@ public class TestingPlayerController : MonoBehaviour
             scoreText.GetComponent<ScoreKeeper>(); 
             SpawnBlocky();
             SpawnPuck();
+            scoreText.GetComponent<ScoreKeeper>().UpdateScore();
         }
         //if it's tagged as "puck":
         if (collision.gameObject.tag == "Puck")
         {
             gameOverText.SetActive(true);
         }
+    }
+
+    public void Reset()
+    {
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     private void LateUpdate()
