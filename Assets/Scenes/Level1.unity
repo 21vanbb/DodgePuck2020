@@ -596,7 +596,7 @@ GameObject:
   - component: {fileID: 1221034368}
   - component: {fileID: 1221034367}
   m_Layer: 5
-  m_Name: Button
+  m_Name: restartButton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1026,7 +1026,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Button
+  m_text: RESTART
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1138,7 +1138,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -432.1, y: 67.9}
+  m_AnchoredPosition: {x: 102.2, y: 20.3}
   m_SizeDelta: {x: 186.8902, y: 73.80368}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1764921197
